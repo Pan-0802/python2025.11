@@ -1,0 +1,18 @@
+#约瑟夫2，用两个列表
+n=eval(input("输入人数"))
+k=eval(input("输入序号"))
+lb = []
+result = []
+
+for i in range(1, n+1):
+    lb.append(i)
+
+current_index = 0
+
+while lb:
+    current_index = (current_index + k - 1) % len(lb)
+    removed = lb.pop(current_index)
+    result.append(removed)
+
+for i in result:
+    print(i)
